@@ -1,9 +1,5 @@
 "use client"
 
-import CreateCarFormComponent from "../form/CreateCarForm"
-import DeleteCarFormComponent from "../form/DeleteCarForm"
-import UpdateCarFormComponent from "../form/UpdateCarForm"
-
 export default function DashboardPage() {
 
     
@@ -21,9 +17,7 @@ export default function DashboardPage() {
 
   return (
     <div>
-        <CreateCarFormComponent/>
-        <UpdateCarFormComponent/>
-        <DeleteCarFormComponent/>
+        
     </div>
   )
 }

@@ -1,16 +1,14 @@
 import {configureStore} from '@reduxjs/toolkit'
-import { carApi } from './services/car/car'
 import  authSlice  from './features/auth/authSlice';
 import { baseApi } from './baseApi';
 
 export const makeStore = () =>{
     return configureStore({
         reducer:{
-           [carApi.reducerPath]:carApi.reducer,
            auth:authSlice,
            [baseApi.reducerPath]:baseApi.reducer
         },
-        middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(carApi.middleware,baseApi.middleware),
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(baseApi.middleware),
     });
 }
 
